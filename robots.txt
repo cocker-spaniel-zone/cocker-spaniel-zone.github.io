@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cocker-spaniel-zone.github.io/sitemap.xml
