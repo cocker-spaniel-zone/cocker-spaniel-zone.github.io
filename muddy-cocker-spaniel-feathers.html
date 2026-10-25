@@ -87,6 +87,43 @@ h1,h2{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;c
 .sc-footer p{margin:0}
 @media (max-width:900px){.layout{grid-template-columns:1fr;gap:28px}.sidebar{position:static;max-height:none}}
 </style>
+
+<style id="sidebar-follow-20261025">
+[data-follow-sidebar]{display:grid!important;gap:16px;position:sticky!important;top:96px!important;align-self:start!important;
+height:fit-content!important;max-height:calc(100dvh - 112px)!important;overflow-y:auto!important;
+min-width:0;overscroll-behavior:contain;scrollbar-width:thin}
+[data-follow-parent]{overflow:visible!important;align-items:start}
+.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;
+width:min(1184px,calc(100% - 32px));margin:32px auto;align-items:start}
+[data-follow-content]{width:auto!important;max-width:100%!important;min-width:0;margin:0!important}
+.follow-sidebar-panel{padding:18px;border:1px solid var(--line,#d8d9d0);border-radius:12px;
+background:var(--soft,#f4f5ef);color:var(--ink,#27382d);margin:0 0 16px}
+.follow-sidebar-panel h2{font:700 .85rem/1.4 system-ui;margin:0 0 12px}
+.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}
+.follow-sidebar-panel a{display:block;padding:8px 0;color:inherit;text-decoration:underline;
+overflow-wrap:anywhere;line-height:1.45}
+@media(max-width:900px){[data-follow-sidebar]{position:static!important;top:auto!important;
+max-height:none!important;height:auto!important;overflow:visible!important;width:100%!important;max-width:100%;float:none!important}
+.follow-sidebar-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
+</style>
+
+<!-- social-cards:start -->
+<meta property="og:title" content="Muddy Cocker Spaniel Feathers: Skip the Daily Bath">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocker-spaniel-zone.github.io/muddy-cocker-spaniel-feathers.html">
+<meta property="og:description" content="Clean muddy Cocker Spaniel feathers after a walk with a practical rinse, dry, and comb routine. Choose the right cleanup without making every walk a bath day.">
+<meta property="og:image" content="https://cocker-spaniel-zone.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:secure_url" content="https://cocker-spaniel-zone.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="golden English Cocker Spaniel trotting through autumn leaves in a park">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muddy Cocker Spaniel Feathers: Skip the Daily Bath">
+<meta name="twitter:description" content="Clean muddy Cocker Spaniel feathers after a walk with a practical rinse, dry, and comb routine. Choose the right cleanup without making every walk a bath day.">
+<meta name="twitter:image" content="https://cocker-spaniel-zone.github.io/assets/social-share-20261025.jpg">
+<meta name="twitter:image:alt" content="golden English Cocker Spaniel trotting through autumn leaves in a park">
+<!-- social-cards:end -->
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -104,7 +141,7 @@ h1,h2{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;c
     <p class="lead">A coat-first cleanup routine you can adapt to today’s walk.</p>
   </div>
 </section>
-<div class="layout" id="content">
+<div class="layout" id="content" data-follow-parent="true">
   <article class="article"><nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span aria-current="page">Muddy Cocker Spaniel Feathers</span></nav>
 <p>Wondering how to clean muddy Cocker Spaniel feathers after a walk without turning every homecoming into bath time? Give yourself a repeatable decision: remove loose dirt, rinse only the muddy sections when necessary, then dry and check the feathering before declaring the job finished.</p>
 <blockquote><strong>Quick answer:</strong> For ordinary walking mud, start with a towel and inspect the hair. Brush away loose, dry surface dirt only when the strands separate easily; use a localized lukewarm-water rinse for wet, gritty, or stuck-together feathers. Finish with gentle drying and a comb check. A full shampoo bath is a separate decision, not an automatic response to muddy feet.</blockquote>
@@ -191,7 +228,7 @@ h1,h2{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;c
 <p>To clean muddy Cocker Spaniel feathers after a walk, make the smallest useful intervention: brush loose surface dirt, rinse stuck mud locally, dry the cleaned sections, and check with a comb. Keep the tools ready and ask your groomer to demonstrate any step you cannot repeat comfortably. You control the routine by inspecting the actual coat rather than following a bath-by-default rule.</p>
 <p class="ai-note" style="border-left:4px solid #042f2e;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>By Hannah Brooks.</strong> Prepared with AI assistance.</p>
 <script id="mud-planner-script">(function(){const state=document.getElementById('mud-state'),area=document.getElementById('mud-area'),knots=document.getElementById('mud-knots'),result=document.getElementById('mud-result');document.getElementById('mud-build').addEventListener('click',function(){let plan=knots.checked?'Pause: do not force a brush or cut the knot. Arrange groomer help with the tangled section.':state.value==='dry'?'Try gentle brushing only where the dry dirt is loose and strands separate. Switch to a local rinse if you find stuck grit.':'Use a local lukewarm-water rinse on the muddy strands, then blot dry and finish your coat check.';let place=area.value==='whole'?' Most of the coat is involved: use your washing area and reassess whether a full wash is needed.':area.value==='belly'?' Include the belly fringe and the backs of the legs in your finishing check.':' Work on the feet and lower feather ends; leave clean areas alone.';result.textContent=plan+place;});document.getElementById('mud-reset').addEventListener('click',function(){state.selectedIndex=0;area.selectedIndex=0;knots.checked=false;result.textContent='Select the coat condition, then show your routine.';});})();</script></article>
-  <aside class="sidebar"><nav class="sidebar-panel toc" aria-label="On this page"><h3>On this page</h3><ol><li><a href="#should-you-let-muddy-feathering-dry-before-brushing">Should you let muddy feathering dry before brushing?</a></li><li><a href="#what-should-you-keep-beside-the-door">What should you keep beside the door?</a></li><li><a href="#how-do-you-clean-muddy-cocker-spaniel-feathers-step-by-step">How do you clean muddy Cocker Spaniel feathers step by step?</a></li><li><a href="#which-cleanup-method-fits-today-s-mess">Which cleanup method fits today&#x27;s mess?</a></li><li><a href="#how-should-you-dry-and-comb-the-long-fringe">How should you dry and comb the long fringe?</a></li><li><a href="#can-a-practical-trim-make-muddy-walks-easier">Can a practical trim make muddy walks easier?</a></li><li><a href="#what-mistakes-make-the-job-feel-endless">What mistakes make the job feel endless?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li><li><a href="#your-repeatable-after-walk-plan">Your repeatable after-walk plan</a></li></ol></nav><section class="sidebar-panel"><h3>About this site</h3><p>Hannah Brooks writes about cocker spaniel ears, coats and happy family routines.</p><p><a href="/about.html">More about us</a></p></section>
+  <aside class="sidebar" data-follow-sidebar="existing"><nav class="sidebar-panel toc" aria-label="On this page"><h3>On this page</h3><ol><li><a href="#should-you-let-muddy-feathering-dry-before-brushing">Should you let muddy feathering dry before brushing?</a></li><li><a href="#what-should-you-keep-beside-the-door">What should you keep beside the door?</a></li><li><a href="#how-do-you-clean-muddy-cocker-spaniel-feathers-step-by-step">How do you clean muddy Cocker Spaniel feathers step by step?</a></li><li><a href="#which-cleanup-method-fits-today-s-mess">Which cleanup method fits today&#x27;s mess?</a></li><li><a href="#how-should-you-dry-and-comb-the-long-fringe">How should you dry and comb the long fringe?</a></li><li><a href="#can-a-practical-trim-make-muddy-walks-easier">Can a practical trim make muddy walks easier?</a></li><li><a href="#what-mistakes-make-the-job-feel-endless">What mistakes make the job feel endless?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li><li><a href="#your-repeatable-after-walk-plan">Your repeatable after-walk plan</a></li></ol></nav><section class="sidebar-panel"><h3>About this site</h3><p>Hannah Brooks writes about cocker spaniel ears, coats and happy family routines.</p><p><a href="/about.html">More about us</a></p></section>
     
   </aside>
 </div>
