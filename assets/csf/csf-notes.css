@@ -84,7 +84,7 @@ h3{font:600 19px/1.4 var(--csf-body);letter-spacing:-.005em}
 .csz-steps p{color:var(--csf-ink-soft)}
 .csz-paths{gap:20px}
 .csz-path{background:var(--csf-card);border:1px solid var(--csf-ink);border-radius:0;padding:28px 26px 26px 34px;position:relative;
-  background-image:linear-gradient(90deg,transparent 0 26px,rgba(180,69,42,.35) 26px 27px,transparent 27px),repeating-linear-gradient(0deg,transparent 0 31px,rgba(201,183,154,.35) 31px 32px)}
+  background-image:linear-gradient(90deg,transparent 0 26px,rgba(180,69,42,.35) 26px 27px,transparent 27px)}
 .csz-path:before{content:"";position:absolute;left:9px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--csf-paper);box-shadow:0 0 0 1px var(--csf-ink)}
 .csz-path:after{content:"CARD";position:absolute;right:0;top:0;background:var(--csf-ink);color:var(--csf-paper);font:500 9px/1 var(--csf-mono);letter-spacing:.2em;padding:6px 9px}
 .csz-path svg{stroke:var(--csf-ink);fill:var(--csf-paper-2);stroke-width:1.4}
