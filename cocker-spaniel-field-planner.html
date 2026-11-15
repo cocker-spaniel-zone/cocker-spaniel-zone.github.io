@@ -189,7 +189,7 @@ h1{font-size:68px}h2{font-size:40px}h3{font:600 21px/1.35 var(--csz-body);margin
 <div><h4>Read</h4><ul><li><a href="/blog.html">Journal</a></li><li><a href="/care.html">Care index</a></li><li><a href="/cocker-spaniel-cut-brief.html">Cut brief</a></li><li><a href="/sitemap.html">Sitemap</a></li></ul></div>
 <div><h4>Site</h4><ul><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/editorial-policy.html">Editorial policy</a></li><li><a href="/disclosure.html">Disclosure</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
 </div><small>&copy; 2026 Cocker Spaniel Zone. Guides are researched and drafted with AI assistance, then checked against our editorial policy.</small></div></footer>
-<script id="csz-measure">window.dataLayer=window.dataLayer||[];function cszTrack(n,p){var e=Object.assign({event:'csf_'+n,site:'cocker-spaniel-zone'},p||{});window.dataLayer.push(e);if(window.gtag)window.gtag('event','csf_'+n,p||{});}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-csz-cta]');if(a)cszTrack('cta_click',{from:a.getAttribute('data-csz-cta')});});cszTrack('view',{page:'field_planner'});</script>
+<script id="csf-measure">window.dataLayer=window.dataLayer||[];function csfTrack(n,p){var e=Object.assign({event:'csf_'+n,site:'cocker-spaniel-zone'},p||{});window.dataLayer.push(e);if(window.gtag)window.gtag('event','csf_'+n,p||{});}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-csz-cta]');if(a)csfTrack('cta_click',{from:a.getAttribute('data-csz-cta')});});csfTrack('view',{page:'field_planner'});</script>
 <script>
 (function(){
   var nose={
@@ -236,15 +236,15 @@ h1{font-size:68px}h2{font-size:40px}h3{font:600 21px/1.35 var(--csz-body);margin
     week.innerHTML=html;
     title.textContent=name?name+' — field card':'Field card';
     status.textContent='Plan built for '+age+', '+energy+' energy, '+space+', '+time+' min/day.';
-    cszTrack('plan',{age:age,energy:energy,space:space,time:time,love:love});
+    csfTrack('plan',{age:age,energy:energy,space:space,time:time,love:love});
   }
   form.addEventListener('submit',function(e){e.preventDefault();build();});
-  form.addEventListener('input',function(){if(!used){used=true;cszTrack('use',{first_input:true});}});
+  form.addEventListener('input',function(){if(!used){used=true;csfTrack('use',{first_input:true});}});
   document.getElementById('csf-reset').addEventListener('click',function(){form.reset();week.innerHTML='<p class="csf-empty">Choose age and time, then build the week. Each day gets one nose job, one body job and one settle job.</p>';title.textContent='Field card';status.textContent='';});
-  document.getElementById('csf-print').addEventListener('click',function(){cszTrack('print',{});window.print();});
+  document.getElementById('csf-print').addEventListener('click',function(){csfTrack('print',{});window.print();});
   document.getElementById('csf-copy').addEventListener('click',function(){
     var text=week.innerText.trim();if(!text){status.textContent='Build the plan first.';return;}
-    (navigator.clipboard?navigator.clipboard.writeText(text):Promise.reject()).then(function(){status.textContent='Copied. Paste it into your notes.';cszTrack('copy',{});}).catch(function(){status.textContent='Copy not available in this browser.';});
+    (navigator.clipboard?navigator.clipboard.writeText(text):Promise.reject()).then(function(){status.textContent='Copied. Paste it into your notes.';csfTrack('copy',{});}).catch(function(){status.textContent='Copy not available in this browser.';});
   });
 })();
 </script>

@@ -151,11 +151,11 @@ h1{font-size:68px}h2{font-size:40px}h3{font:600 21px/1.35 var(--csz-body);margin
 <div><h4>Read</h4><ul><li><a href="/blog.html">Journal</a></li><li><a href="/care.html">Care index</a></li><li><a href="/cocker-spaniel-cut-brief.html">Cut brief</a></li><li><a href="/sitemap.html">Sitemap</a></li></ul></div>
 <div><h4>Site</h4><ul><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/editorial-policy.html">Editorial policy</a></li><li><a href="/disclosure.html">Disclosure</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
 </div><small>&copy; 2026 Cocker Spaniel Zone. Guides are researched and drafted with AI assistance, then checked against our editorial policy.</small></div></footer>
-<script id="csz-measure">window.dataLayer=window.dataLayer||[];function cszTrack(n,p){var e=Object.assign({event:'csf_'+n,site:'cocker-spaniel-zone'},p||{});window.dataLayer.push(e);if(window.gtag)window.gtag('event','csf_'+n,p||{});}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-csz-cta]');if(a)cszTrack('cta_click',{from:a.getAttribute('data-csz-cta')});});</script>
+<script id="csf-measure">window.dataLayer=window.dataLayer||[];function csfTrack(n,p){var e=Object.assign({event:'csf_'+n,site:'cocker-spaniel-zone'},p||{});window.dataLayer.push(e);if(window.gtag)window.gtag('event','csf_'+n,p||{});}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-csz-cta]');if(a)csfTrack('cta_click',{from:a.getAttribute('data-csz-cta')});});</script>
 <script id="csz-brief">(function(){
 var Z=[["head", "Head and topknot"], ["ears", "Ears"], ["body", "Back and body"], ["feather", "Leg and belly feathering"], ["feet", "Feet"], ["tail", "Tail"]],P={"tidy": [1, 0, 1, 1, 0, 0], "short": [2, 1, 2, 2, 0, 2], "natural": [0, 0, 0, 0, 0, 0], "field": [1, 1, 1, 2, 0, 2]},C=[["tidy", "Tidy pet trim"], ["short", "Short all-over clip"], ["natural", "Natural feathered look"], ["field", "Field-ready trim"]],H=[["first", "First visit to a grooming salon"], ["breaks", "Settles better with short breaks"], ["dryer", "Unsure about the dryer noise"], ["feet", "Fidgets when the feet are handled"], ["harness", "Wears a harness daily (look at the rub patches)"]];
 var $=function(id){return document.getElementById('csz-'+id)};var form=$('form');var used=false,converted=false;
-cszTrack('view',{tool:'cut_brief'});
+csfTrack('view',{tool:'cut_brief'});
 function cutLabel(k){for(var i=0;i<C.length;i++)if(C[i][0]===k)return C[i][1];return 'Custom mix'}
 function state(){var cut=(form.querySelector('input[name=csz-cut]:checked')||{}).value||'';var zones=Z.map(function(z){return [z[1],$('z-'+z[0]).value]});
 var notes=H.filter(function(h){return $('h-'+h[0]).checked}).map(function(h){return h[1]});
@@ -166,7 +166,7 @@ var dt=document.createElement('dt'),dd=document.createElement('dd');dt.textConte
 if(s.extra){dt=document.createElement('dt');dd=document.createElement('dd');dt.textContent='Also';dd.textContent=s.extra;dl.append(dt,dd)}
 var ready=!!s.cut;$('pdf').disabled=!ready;$('print').disabled=!ready;$('status').textContent=ready?'Ready to download or print.':'Choose a starting cut to unlock the PDF.';return s}
 function preset(k){var p=P[k];if(!p)return;Z.forEach(function(z,i){$('z-'+z[0]).selectedIndex=p[i]})}
-function first(how){if(!used){used=true;cszTrack('use',{tool:'cut_brief',first_input:how})}}
+function first(how){if(!used){used=true;csfTrack('use',{tool:'cut_brief',first_input:how})}}
 form.addEventListener('change',function(e){if(e.target.name==='csz-cut'){preset(e.target.value);first('cut')}else first(e.target.id.replace('csz-',''));render()});
 form.addEventListener('input',function(e){if(e.target.type==='text'||e.target.tagName==='TEXTAREA'){first(e.target.id.replace('csz-',''));render()}});
 function ascii(t){return String(t).replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[–—]/g,'-').replace(/…/g,'...').normalize('NFKD').replace(/[^\x20-\x7e]/g,'')}
@@ -191,7 +191,7 @@ var content=ops.join('\n'),objs=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /
 '<< /Length '+content.length+' >>\nstream\n'+content+'\nendstream'];
 var out='%PDF-1.4\n',offs=[];objs.forEach(function(o,i){offs.push(out.length);out+=(i+1)+' 0 obj\n'+o+'\nendobj\n'});
 var x=out.length;out+='xref\n0 '+(objs.length+1)+'\n0000000000 65535 f \n'+offs.map(function(o){return ('000000000'+o).slice(-10)+' 00000 n \n'}).join('')+'trailer\n<< /Size '+(objs.length+1)+' /Root 1 0 R >>\nstartxref\n'+x+'\n%%EOF\n';return out}
-function convert(action){var s=render();if(!s.cut)return null;if(!converted){converted=true;cszTrack('convert',{tool:'cut_brief',action:action,cut:s.cut})}return s}
+function convert(action){var s=render();if(!s.cut)return null;if(!converted){converted=true;csfTrack('convert',{tool:'cut_brief',action:action,cut:s.cut})}return s}
 $('pdf').addEventListener('click',function(){var s=convert('pdf_download');if(!s)return;var blob=new Blob([pdf(s)],{type:'application/pdf'}),a=document.createElement('a');
 a.href=URL.createObjectURL(blob);a.download='cocker-spaniel-groomer-brief.pdf';document.body.append(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},4000);$('status').textContent='PDF downloaded. Take it to the appointment.'});
 $('print').addEventListener('click',function(){if(convert('print'))window.print()});
